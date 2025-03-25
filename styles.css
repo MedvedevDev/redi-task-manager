@@ -56,24 +56,48 @@ body {
     list-style: none;
     padding: 0;
     margin-top: 20px;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        font-size: 18px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 }
 
-#task-list li {
-    background: white;
+.task-content {
+    flex-grow: 1;
     text-align: left;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    font-size: 18px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.task-buttons {
+.task-actions {
     display: flex;
-    gap: 5px;
+    gap: 10px; 
+    align-items: center; 
+
+    .complete-btn, .delete-btn {
+        border: none;
+        background: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    .complete-btn {
+        color: green;
+    }
+    
+    .delete-btn {
+        color: red;
+    }
 }
 
-.task-buttons button {
-    padding: 5px;
-    font-size: 14px;
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
